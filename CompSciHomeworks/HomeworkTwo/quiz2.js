@@ -6,7 +6,7 @@ let johnAvg = (89 + 103 + 120) / 3
 
 let mikeAvg = (116 + 94 + 123) / 3 
 
-switch(winner) {
+switch(mikeAvg >= johnAvg) {
     case ( johnAvg >= mikeAvg) :
         console.log(`John has a higher average score of ${johnAvg}`);
         break;
