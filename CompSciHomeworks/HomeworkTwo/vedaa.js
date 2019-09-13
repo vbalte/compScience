@@ -44,3 +44,4 @@ switch(new Date().getDate()) {
 
 console.log(`Today is ${day}`);
 
+    

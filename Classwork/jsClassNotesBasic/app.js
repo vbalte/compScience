@@ -11,14 +11,14 @@ let boolean = true; //true or false only
  */
 //////////////////////
 
-const firstName = 'Rob';
+/* const firstName = 'Rob';
 const job = "Student";
 const birthyear = 2002;
 let isMarried = false;
 
 /* console.log("Hello my name is " + firstName + "I am a " + job ); //old way to do it  */
 
-console.log(`Hello my name is ${firstName}, I am a ${job}`) //can even use boolean in the sentence 
+/* console.log(`Hello my name is ${firstName}, I am a ${job}`) //can even use boolean in the sentence 
 
 const now = new Date().getFullYear(); 
 const yearVeda = 2002;
@@ -35,8 +35,8 @@ let x,y;
 x = y;
 y = 5;
 console.log(x);
-
-
+ */
+ 
 
 
 
@@ -140,6 +140,41 @@ if (height == '22') {
  */
 
 
+//////////////functions 
+function calculateAge(birthYear) {
+    console.log(2019 - birthYear) ;
+    return 2019 - birthYear;
+}
+
+let galloBirth = 2002;
+calculateAge(galloBirth); 
+//functionCall(argument goes here);
+
+
+function noArg() {
+    console.log(`something`);
+}
+
+noArg(); 
 
 
 
+//variable As function 
+
+const ageGallo = calculateAge(2002);
+const ageIlsa = calculateAge(2003);
+const ageThami = calculateAge(2004);
+console.log(ageGallo, ageIlsa, ageThami);
+
+let firstName = `Brendan`
+
+function yearsUntilRetirement(year, firstName) {
+    let age = calculateAge(year);
+    let retirement = 65 - age ;
+
+    console.log(`${firstName} retires in ${retirement} years`)
+}
+
+yearsUntilRetirement (2002, firstName);
+
+//VARIABLE NOT ACCESSIBLE OUTSIDE FUNCTION 
