@@ -21,3 +21,5 @@ switch(mikeAvg >= johnAvg) {
         break;
 }
 
+// my quiz using switche 
+
