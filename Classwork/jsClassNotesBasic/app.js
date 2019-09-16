@@ -141,7 +141,7 @@ if (height == '22') {
 
 
 //////////////functions 
-function calculateAge(birthYear) {
+/* function calculateAge(birthYear) {
     console.log(2019 - birthYear) ;
     return 2019 - birthYear;
 }
@@ -155,13 +155,13 @@ function noArg() {
     console.log(`something`);
 }
 
-noArg(); 
+noArg();  */
 
 
 
 //variable As function 
 
-const ageGallo = calculateAge(2002);
+/* const ageGallo = calculateAge(2002);
 const ageIlsa = calculateAge(2003);
 const ageThami = calculateAge(2004);
 console.log(ageGallo, ageIlsa, ageThami);
@@ -175,6 +175,44 @@ function yearsUntilRetirement(year, firstName) {
     console.log(`${firstName} retires in ${retirement} years`)
 }
 
-yearsUntilRetirement (2002, firstName);
+yearsUntilRetirement (2002, firstName); */
 
 //VARIABLE NOT ACCESSIBLE OUTSIDE FUNCTION 
+
+
+///function whatDoYouDo(job, firstName) {}; Function declaration without definition/expression
+
+let whatDoYouDo = function(job, firstName){
+    switch(job) {
+        case 'teacher':
+            return firstName + 'teachers children';
+        case 'driver':
+            return firstName + 'drivers people....over Bryan' ;
+        case 'designer' :
+             return firstName + 'designers things';
+        default:
+           return firstName + 'is broke and homeless';
+    }
+}
+
+console.log(whatDoYouDo('teacher' , 'Thami')) ;
+console.log(whatDoYouDo('driver' , 'veda'));
+console.log(whatDoYouDo('musician' , 'rob'));
+
+
+//***************/ Arrays
+
+
+
+
+//Initalizing an array
+let names = ['Brian', 'andrew', 'Winny', 'Kaey'];
+let numbers = [1,25,6,7,8];
+let crazyArray = ['string', 203, true];
+
+console.log(name[0]);
+console.log(names.length);
+
+names.forEach(function(el)){
+    console.log(el);
+}
