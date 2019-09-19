@@ -1,4 +1,4 @@
-///////////Primitives
+/* ///////////Primitives
 /*  let numbers = 4;  //if you used const, cannot reassign 
 numbers = 5; //redefining it, console shows 5
 let numbersArrays = [1,2,3,4,5]; 
@@ -68,7 +68,7 @@ let isMarried = false; */
 
 /* console.log(`Hello my name is ${firstName}, I am a ${job}`) //can even use boolean in the sentence  */
 
-/* 
+/*  
 let firstName = 'Paul';
 let status = 'single';
 
@@ -181,7 +181,7 @@ yearsUntilRetirement (2002, firstName); */
 
 
 ///function whatDoYouDo(job, firstName) {}; Function declaration without definition/expression
-
+/* 
 let whatDoYouDo = function(job, firstName){
     switch(job) {
         case 'teacher':
@@ -198,7 +198,7 @@ let whatDoYouDo = function(job, firstName){
 console.log(whatDoYouDo('teacher' , 'Thami')) ;
 console.log(whatDoYouDo('driver' , 'veda'));
 console.log(whatDoYouDo('musician' , 'rob'));
-
+ */
 
 //***************/ Arrays
 
@@ -206,7 +206,7 @@ console.log(whatDoYouDo('musician' , 'rob'));
 
 
 //Initalizing an array
-let names = ['Brian', 'andrew', 'Winny', 'Kaey'];
+/* let names = ['Brian', 'andrew', 'Winny', 'Kaey'];
 let numbers = [1,25,6,7,8];
 let crazyArray = ['string', 203, true];
 
@@ -216,3 +216,136 @@ console.log(names.length);
 names.forEach(function(el)){
     console.log(el);
 }
+
+ */
+/* 
+ let names = ['Brian', 'andrew', 'Winny', 'Kaey']; 
+ const namPairs = [names[0] + names[1],
+/*     names [2] + names [3] ]; */
+
+////////OBJECTS AND METHODS
+
+/* const hero = {
+    alias : `Spiderman`,
+    firstName : `Peter`,
+    lastName: `Parker`,
+    age: 16,
+    goodGuy: true,
+    location: {
+        state: `NY`,
+        city: `NYC`
+    },
+    getBirthYear: function() {
+        return 2019 - this.age; //goes back into the object and calls value
+    }
+ */
+
+
+
+/* 
+console.log(hero.getBirthYear());
+console.log(hero.location.city);
+
+const me = Object.create(hero);
+//myCar.make = `Ford` ;
+me.alias = `Superman`;
+console.log(me);
+console.log(hero); 
+  */
+
+
+
+  ///////LOOPS AND ITERATIONS
+
+  const cars = [`Ford`, `Chevy`, `Honda`, `Toyota`];
+ /*  for (i = 0; i <= cars.length; i++);
+
+ */
+
+
+/* cars.forEach(function(car) {
+    console.log(`${car}`); 
+}) */ //replace for loop, iterate through array 
+
+
+
+
+// hoisting, scope, and execution stack AKA JAvascript you dont see 
+
+
+/* 
+
+//execution stack
+function test1(){
+    console.log(`Test1`)
+    function Test2() {
+        console.log(`Test2`);
+        function test3 (){
+            console.log(`test3`);
+        }
+        test3()
+    }
+    Test2()
+}
+
+
+test1()  */   ///infinite loop
+
+
+///hoisting
+
+
+/* 
+function Test1(){
+    console.log(`this is hoisted?`)
+}
+
+
+const notHoisted = function() {
+    console.log(`I am not hoisted`);
+} 
+
+Test1()
+notHoisted() */ //cannot put above where u declared the function 
+
+
+//////this keyword
+
+/* function test1() {
+    console.log(this);
+}
+test1() 
+ */
+
+
+/* const Spiderman = {
+    alias : `Spiderman`,
+    firstName : `Peter`,
+    lastName: `Parker`,
+    age: 16,
+    goodGuy: true,
+    location: {
+        state: `NY`,
+        city: `NYC`
+    },
+    getBirthYear: function(){
+        console.log(this);
+    }
+
+} */
+//this points to our object 
+/* Spiderman.getBirthYear(); */
+
+
+// make new 
+/* function Hero(alias, powers, age) {
+    this.alias = alias;
+    this.powers = powers;
+    this.age = age; 
+}
+const batman = new Hero(`Batman`, `Healthy`, 44);
+console.log(batman);
+
+ */
+
+ 
