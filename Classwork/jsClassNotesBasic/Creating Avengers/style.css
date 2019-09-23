@@ -1,4 +1,45 @@
-body{
-    background-color: red;
+html{
+    font-size: 62.5%; /* this makes all relative units equal 10px, REM-relative unit, 1rem = 10px*/
 }
 
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Big Shoulders Display', cursive;
+
+}
+
+.banner{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #c96567; 
+    color: white;
+    height: 20vh; /* viewport height alwasy take 20 percent */
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+
+.user-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#hero-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh; 
+
+}
+
+.hero-form-input{
+
+
+}
