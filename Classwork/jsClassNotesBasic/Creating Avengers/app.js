@@ -29,9 +29,34 @@ console.log(ironMan); */
 
 //display object on screen 
 
-const form = document.querySelector('#hero-form'); n//could also getElementbyId
+const form = document.querySelector('#hero-form'); //could also getElementbyId
 const userAlias = document.querySelector('#alias');
 const userPowers = document.querySelector('#powers');
 const userFullName = document.querySelector('#full-name');
 const userFirstAppearance = document.querySelector('#first-appearance');
 const userImage = document.querySelector('#image');
+const display = document.querySelector('.display'); 
+
+function eventListeners() {
+   form.addEventListener('submit', displayAvengerMember);
+   /* form.addEventListener('submit', function(){
+    console.log('test');
+   }); */
+
+}
+   
+eventListeners();
+
+function displayAvengerMember(e) {
+    let html = '<div class="display-avengers"><div class="display-alias">%alias%</div><div class = "display-powers">%powers$</div><div class="display-name">%name%</div><div class="first-appearance"></div><div class="display-image"><img src= "%url%" alt=""></p></div><div class="remove-avenger"><p class="remove-avenger"> Remove Avengers &#10006; </p></p></div></div>'
+
+    let newHtml = html.replace('%alias%', userAlias.value);
+    newHtml = newHtml.replace('%powers%', userPowers.value);
+    newHtml = newHtml.replace('%name%', userFullName.value);
+    newHtml = newHtml.replace('%years%', userFirstAppearance.value);
+    newHtml = newHtml.replace('%url%', userImage.value);
+    display.insertAdjacentHTML('beforeend', newHtml); 
+    console.log('hdwuheihdwe'); 
+    console.log(userAlias.value);
+}
+
