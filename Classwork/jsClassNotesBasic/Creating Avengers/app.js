@@ -39,6 +39,7 @@ const display = document.querySelector('.display');
 
 function eventListeners() {
    form.addEventListener('submit', displayAvengerMember);
+   display.addEventListener('click', removeAvenger); 
    /* form.addEventListener('submit', function(){
     console.log('test');
    }); */
@@ -56,7 +57,17 @@ function displayAvengerMember(e) {
     newHtml = newHtml.replace('%years%', userFirstAppearance.value);
     newHtml = newHtml.replace('%url%', userImage.value);
     display.insertAdjacentHTML('beforeend', newHtml); 
-    console.log('hdwuheihdwe'); 
-    console.log(userAlias.value);
+    console.log('is the vent firing'); 
+   
+
+    e.preventDefault(); 
 }
 
+function removeAvenger(e) {
+    if(e.target.parentElement.classList.contains('remove-avenger')){
+      //e.target.parentElement.parentElement.remove();
+       console.log(e.target.parentElement); 
+    }
+}
+
+removeAvenger(); 

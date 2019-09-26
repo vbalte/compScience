@@ -46,15 +46,16 @@ html{
     width: 20rem;
 }
 
-/* #alias{
+#alias{
     height: 3rem;
-} make one chnage size */
+} 
 
 .hero-form-input{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
     height: 60vh;
 
 }
