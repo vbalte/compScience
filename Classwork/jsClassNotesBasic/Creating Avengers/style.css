@@ -112,3 +112,11 @@ html{
 .display-image img{
     height: 9rem;
 }
+
+
+.utility-flex{
+    align-items: center;
+    display: flex;
+    justify-content: space-between; 
+}
+
