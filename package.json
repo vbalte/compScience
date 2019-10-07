@@ -1,0 +1,23 @@
+{
+  "name": "np-test",
+  "version": "1.0.0",
+  "description": "using npm",
+  "main": "index.js",
+  "scripts": {
+    "build.css": "tailwind build src/main.css -o dist/css/tailwind.css"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbalte/compScience.git"
+  },
+  "keywords": [
+    "v"
+  ],
+  "author": "Veda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbalte/compScience/issues"
+  },
+  "homepage": "https://github.com/vbalte/compScience#readme"
+}

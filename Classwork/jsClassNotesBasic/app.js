@@ -257,7 +257,7 @@ console.log(hero);
 
   ///////LOOPS AND ITERATIONS
 
-  const cars = [`Ford`, `Chevy`, `Honda`, `Toyota`];
+//   const cars = [`Ford`, `Chevy`, `Honda`, `Toyota`];
  /*  for (i = 0; i <= cars.length; i++);
 
  */
@@ -348,4 +348,28 @@ console.log(batman);
 
  */
 
+ class Album {
+     constructor(title, artist, yearReleased){
+         this.title = title;
+         this.artist = artist; 
+         this.yearReleased = yearReleased;
+     }
+
+     calculateAge(){
+        return (new Date().getFullYear() - this.yearReleased); //maybe can use an arrow function here
+     }  //private function inside the class 
+ }
+
+
+ const abbeyRoad = new Album('Abeey Road', 'The Beatles', 1969) //Instantiate new album 
+ const americanTeen = new Album('AmericanTeen', 'Khalid', 2017); 
  
+//  console.log(americanTeen); 
+
+class CD extends Album {
+    constructor(title, artist, yearReleased,digital) {
+        super(title, artist, yearReleased);
+        this.digital = this.digital; 
+    }
+}
+
