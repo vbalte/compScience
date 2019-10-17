@@ -23,27 +23,39 @@ class movieUI {
           
         let html = ' <div class="display-movie"><div class="display-title">%album%</div><div class = "display-producer">%producer%</div><div class="display-yearReleased">%yearReleased%</div></div>'
     
-        let newHtml = html.replace('%title%', userTitle.value);
-        newHtml = newHtml.replace('%producer%', userProducer.value);
-        newHtml = newHtml.replace('%yearReleased%', useryearReleased.value); 
-        document.querySelector.display.insertAdjacentElement('beforeend', newHtml)
+        let newHtml = html.replace('%title%', movieUI.title);
+        newHtml = newHtml.replace('%producer%', movieUI.producer);
+        newHtml = newHtml.replace('%yearReleased%', movieUI.yearReleased); 
+        document.querySelector(".display").insertAdjacentElement('beforeend', newHtml); 
     
         e.preventDefault(); 
-    }
+        if(userTitle.value === "") {
+            alert('title missing') 
+        } else if (userProducer.value === "") {
+            alert ('producer missing')      
+            } else if (useryearReleased.value === "") {
+                alert('NO year released')
+            }
+        }
+    }; 
     
      removeMovie(e) {
         if(e.target.parentElement.classList.contains('remove-movie')){
             e.target.parentElement.parentElement.remove();
             console.log(e.target.parentElement);
-        }
+        }; 
     
-    init() {
+   function init(){
         userTitle.value = '';
         userProducer.value = '';
         useryearReleased.value = '';
-    }
+    } }
+}
+}
 
-    init(); 
+init(); 
+
+
 
 
 //remove something/object 
@@ -54,24 +66,24 @@ class movieUI {
 
 //controller combines ui and model
 //eventListener handler with function 
-document.
 
 function eventListeners(){
-    form.addEventListener('submit', displayAvengerMember);
+    form.addEventListener('submit', displayMovie);
     display.addEventListener('click', removeAvenger);
     
 }
 
-const title = document.getElementById('bfhebf').value;
-const artist = 
+const title = document.getElementById('title').value;
+const producer = document.getElementById('producer').value; 
+const yearReleased = document.getElementById('yearReleased').value; 
 
-const album = new album(title, artist,url)
+const movie = new movie(title, producer,yearReleased); 
 
 const ui = new UI();
 
-ui.addAlbumToList(album);
+ui.displayMovie(album);
 
-ui.clearFields();
+ui.init();
 
 e.preventDefault();
 
