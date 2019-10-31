@@ -348,30 +348,30 @@ console.log(batman);
 
  */
 
- class Album {
-     constructor(title, artist, yearReleased){
-         this.title = title;
-         this.artist = artist; 
-         this.yearReleased = yearReleased;
-     }
+//  class Album {
+//      constructor(title, artist, yearReleased){
+//          this.title = title;
+//          this.artist = artist; 
+//          this.yearReleased = yearReleased;
+//      }
 
-     calculateAge(){
-        return (new Date().getFullYear() - this.yearReleased); //maybe can use an arrow function here
-     }  //private function inside the class 
- }
+//      calculateAge(){
+//         return (new Date().getFullYear() - this.yearReleased); //maybe can use an arrow function here
+//      }  //private function inside the class 
+//  }
 
 
- const abbeyRoad = new Album('Abeey Road', 'The Beatles', 1969) //Instantiate new album 
- const americanTeen = new Album('AmericanTeen', 'Khalid', 2017); 
+//  const abbeyRoad = new Album('Abeey Road', 'The Beatles', 1969) //Instantiate new album 
+//  const americanTeen = new Album('AmericanTeen', 'Khalid', 2017); 
  
-//  console.log(americanTeen); 
+// //  console.log(americanTeen); 
 
-class CD extends Album {
-    constructor(title, artist, yearReleased,digital) {
-        super(title, artist, yearReleased);
-        this.digital = this.digital; 
-    }
-}
+// class CD extends Album {
+//     constructor(title, artist, yearReleased,digital) {
+//         super(title, artist, yearReleased);
+//         this.digital = this.digital; 
+//     }
+// }
 
 
 
@@ -427,3 +427,61 @@ class CD extends Album {
 
 
 //seperate event handler for removing/deleting 
+
+    // Array.prototype.find()
+    // Find is like filter, but instead returns just the one you are looking for
+    // find the comment with the ID of 823423
+
+    // var superGood = comments.find(function(el) {
+    //     return el.id === 823423;  
+    // });
+    
+    // console.log(superGood); 
+    
+    
+    //SYNCHRONOUS JAVASCRIPT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+    const second = () => {
+        setTimeout(() => {
+            console.log('Async Hey there'); 
+        }, 2000);
+    }
+
+
+
+
+    const first = () => {
+        console.log('Hey there'); 
+        second();
+        console.log('The End'); 
+    }
+
+    first(); \
+
+   
+
+/* function getPkmn() {
+    fetch('https://pokeapi.co/api/v2/pokemon/ditto').then(result => {
+    return result.json()
+}).then(data => console.log(data.sprites.front_shiny)); 
+}
+getPkmn();  */
+
+//promise: whenever u run fetch, it gives u a promise that data will return 
+
+
+async function getPkmn(){
+try{
+   const result = await fetch('https://pokeapi.co/api/v2/pokemon/ditto'); 
+   const data = await result.json(); 
+   console.log(data); 
+
+
+} catch(err){
+    console.log(err); 
+}
+   
+}
+
+getPkmn(); 
