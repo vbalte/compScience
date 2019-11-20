@@ -113,7 +113,6 @@ function eventListeners(){
     /* form.addEventListener('submit', function(){
        console.log('test');
    });  */
-}
 eventListeners();
 
 function displayAvengerMember(e) {
